@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Seyyed Ali Ayati"
+title                    : "About"
 title_separator          : "-"
 name                     : &name "Seyyed Ali Ayati"
 description              : &description "Software Engineer"
@@ -83,7 +83,7 @@ author:
   name             : "Seyyed Ali Ayati"
   avatar           : "me.jpg"
   bio              : "A passionate software engineer and a professional software developer."
-  location         : "Tehran, Iran"
+  location         : "Iran"
   employer         :
   pubmed           :
   googlescholar    :

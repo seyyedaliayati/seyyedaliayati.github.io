@@ -9,4 +9,5 @@ redirect_from:
 ---
 
 <!-- TODO: add about me. -->
-Here is about me!
+This website is still under development, but the CV is downloadable.
+Thanks for your patience!
