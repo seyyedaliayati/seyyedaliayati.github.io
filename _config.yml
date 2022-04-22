@@ -82,13 +82,13 @@ analytics:
 author:
   name             : "Seyyed Ali Ayati"
   avatar           : "me.jpg"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  bio              : "A passionate software engineer and a professional software developer."
+  location         : "Tehran, Iran"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  pubmed           :
+  googlescholar    :
+  email            : "seyyedaliayati@gmail.com"
+  researchgate     :
   uri              :
   bitbucket        :
   codepen          :
@@ -96,20 +96,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "seyyedaliayati"
   google_plus      :
   keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  instagram        : "seyyedaliayati"
+  impactstory      :
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         : "seyyedaliayati"
+  orcid            :
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    :
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          :
   vine             :
   weibo            :
   xing             :
