@@ -1,1 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-22T06:56:02-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">About</title><subtitle>Software Engineer</subtitle><author><name>Seyyed Ali Ayati</name><email>seyyedaliayati@gmail.com</email></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="https://seyyedaliayati.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://seyyedaliayati.github.io/" rel="alternate" type="text/html" /><updated>2022-05-14T11:52:18-07:00</updated><id>https://seyyedaliayati.github.io/feed.xml</id><title type="html">About</title><subtitle>Software Engineer</subtitle><author><name>Seyyed Ali Ayati</name><email>seyyedaliayati@gmail.com</email></author><entry><title type="html">How to Extend User Model in Django</title><link href="https://seyyedaliayati.github.io/posts/how-to-extend-user-model-in-django/" rel="alternate" type="text/html" title="How to Extend User Model in Django" /><published>2022-05-15T00:00:00-07:00</published><updated>2022-05-15T00:00:00-07:00</updated><id>https://seyyedaliayati.github.io/posts/how-to-extend-user-model-in-django</id><content type="html" xml:base="https://seyyedaliayati.github.io/posts/how-to-extend-user-model-in-django/">&lt;p&gt;Welcome to my first blog post. Tonight, I decided to share my knowledge and exprience globally using a personal blog. (I will share my exprience of creating this blog later.) I used the Django framework in several projects and saw and read lots of materials about this framework. It is one of the best web frameworks.&lt;/p&gt;
+
+&lt;p&gt;The most common and first things in using django framework or any web framework is to define a customizable user model. Unfortunaly or fortunatly
+There are four ways to extend the user model in the Django framework. In this post, I am going to explain each of them.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Using a proxy model.&lt;/li&gt;
+  &lt;li&gt;Using a profile model.&lt;/li&gt;
+  &lt;li&gt;Extending &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AbstractBaseUser&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Extending &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AbstractUser&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;using-a-proxy-model&quot;&gt;Using a Proxy Model&lt;/h2&gt;
+
+&lt;p&gt;A proxy model is a kind of inheritance without creating a new table in the database. So, if you are going to just change some behaviors (methods, manager queries), this method is recommended.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.contrib.auth.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;.managers&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CustomUserManager&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CustomUser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;objects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CustomUserManager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;proxy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;ordering&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;first_name&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;do_something&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Since &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CustomUser&lt;/code&gt; is a proxy model (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;proxy = True&lt;/code&gt;), ``User.objects.all()&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; and &lt;/code&gt;CustomUser.objects.all()&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; are identical and will hit the same table. The difference is just the behavior we define (i.e. &lt;/code&gt;do_something`).&lt;/p&gt;
+
+&lt;h2 id=&quot;using-a-profile-model&quot;&gt;Using a Profile Model&lt;/h2&gt;
+&lt;p&gt;some details here.&lt;/p&gt;
+
+&lt;h2 id=&quot;extending-abstractbaseuser&quot;&gt;Extending AbstractBaseUser&lt;/h2&gt;
+&lt;p&gt;some details here.&lt;/p&gt;
+
+&lt;h2 id=&quot;extending-abstractuser&quot;&gt;Extending AbstractUser&lt;/h2&gt;
+&lt;p&gt;some details here.&lt;/p&gt;</content><author><name>Seyyed Ali Ayati</name><email>seyyedaliayati@gmail.com</email></author><category term="python" /><category term="django" /><summary type="html">Welcome to my first blog post. Tonight, I decided to share my knowledge and exprience globally using a personal blog. (I will share my exprience of creating this blog later.) I used the Django framework in several projects and saw and read lots of materials about this framework. It is one of the best web frameworks.</summary></entry></feed>
