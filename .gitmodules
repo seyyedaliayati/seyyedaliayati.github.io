@@ -1,4 +1,4 @@
 [submodule "themes/apollo"]
     path = themes/apollo
-    url = git://github.com/not-matthias/apollo.git
+    url = https://github.com/not-matthias/apollo
     
