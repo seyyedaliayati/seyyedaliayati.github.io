@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://seyyedaliayati.github.io/sitemap.xml
