@@ -1,0 +1,40 @@
+# The URL the site will be built for
+base_url = "https://seyyedaliayati.github.io"
+title = "seyyedaliayati"
+theme = "apollo"
+compile_sass = true
+build_search_index = true
+generate_feed = true
+minify_html = true
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "ayu-dark"
+
+[extra]
+toc = true
+use_cdn = false
+favicon = "/icon/favicon.png"
+theme = "auto" 
+
+menu = [
+    { name = "/publications", url = "/publications", weight = 1 },
+    { name = "/projects", url = "/projects", weight = 2 },
+    { name = "/cv", url = "/cv", weight = 1 },
+    { name = "/posts", url = "/posts", weight = 4 },
+]
+
+socials = [
+    { name = "linkedin", url = "https://linkedin.com/in/seyyedaliayati/", icon = "linkedin" },
+    { name = "github", url = "https://github.com/seyyedaliayati/", icon = "github" },
+]
+
+custom_css = []
+
+
+[extra.analytics]
+enabled = true
+goatcounter_user = "seyyedaliayati"
+goatcounter_host = "goatcounter.com"
