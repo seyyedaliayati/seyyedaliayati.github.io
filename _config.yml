@@ -27,14 +27,14 @@ author:
   bio              : "Ph.D. Student in Computer Engineering"
   location         : "College Station, TX"
   employer         : "Texas A&M University"
-  uri              : "https://seyyedaliayati.github.io"
-  email            : "seyyedaliayati@gmail.com" 
+  uri              : # URL
+  email            : "ali.a@tamu.edu" 
 
   # Academic websites
-  arxiv            : "https://arxiv.org/search/cs?searchtype=author&query=Ayati,+S+A"
-  googlescholar    : "umACieAAAAAJ"
+  arxiv            : # URL
+  googlescholar    : "https://scholar.google.com/citations?user=umACieAAAAAJ&hl=en"
   impactstory      : # URL
-  orcid            : "https://orcid.org/0009-0006-5247-0241"
+  orcid            : # URL
   semantic         : # URL
   pubmed           : # URL
   researchgate     : # URL
@@ -55,7 +55,7 @@ author:
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
-  instagram        : "ali_it78"
+  instagram        : # Username
   lastfm           : # Username
   linkedin         : "seyyedaliayati"
   mastodon         : # URL
