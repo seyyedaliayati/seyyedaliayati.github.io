@@ -12,7 +12,7 @@ title                    : "Seyyed Ali Ayati"
 title_separator          : "-"
 name                     : &name "Seyyed Ali Ayati"
 description              : &description "My first name is \"Seyyed Ali\", and last name is \"Ayati\""
-url                      : https://seyyedaliayati.github.io
+url                      : "https://seyyedaliayati.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "seyyedaliayati/seyyedaliayati.github.io"
 
@@ -31,10 +31,10 @@ author:
   email            : "seyyedaliayati@gmail.com" 
 
   # Academic websites
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : # The user number for your Google Scholar profile
+  arxiv            : "https://arxiv.org/search/cs?searchtype=author&query=Ayati,+S+A"
+  googlescholar    : "umACieAAAAAJ"
   impactstory      : # URL
-  orcid            : # URL
+  orcid            : "https://orcid.org/0009-0006-5247-0241"
   semantic         : # URL
   pubmed           : # URL
   researchgate     : # URL
