@@ -23,7 +23,7 @@ author:
   # Biographic information
   avatar           : "profile.jpg"
   name             : "Seyyed Ali Ayati"
-  pronouns         : "he/him"
+  pronouns         :  # e.g. "he/him", "she/her", "they/them", "ze/zir", "xe/xem"
   bio              : "Ph.D. Student in Computer Engineering"
   location         : "College Station, TX"
   employer         : "Texas A&M University"

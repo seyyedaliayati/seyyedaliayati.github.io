@@ -1,13 +1,14 @@
 # main links links
 main:
-  - title: "Blog"
-    url: /blog/
-
-  - title: "Projects"
-    url: /projects/
-  
-  - title: "Certifications"
-    url: /certifications/
-
+  - title: "Home"
+    url: /
   - title: "CV"
     url: /cv/
+  - title: "Projects"
+    url: /projects/
+  - title: "Teaching"
+    url: /teaching/
+  - title: "Skills"
+    url: /skills/
+  - title: "Blog"
+    url: /blog/
